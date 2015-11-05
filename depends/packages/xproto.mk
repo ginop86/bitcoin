@@ -1,8 +1,8 @@
 package=xproto
-$(package)_version=7.0.26
+$(package)_version=7.0.28
 $(package)_download_path=http://xorg.freedesktop.org/releases/individual/proto
 $(package)_file_name=$(package)-$($(package)_version).tar.bz2
-$(package)_sha256_hash=636162c1759805a5a0114a369dffdeccb8af8c859ef6e1445f26a4e6e046514f
+$(package)_sha256_hash=29e85568d1f68ceef8a2c081dad9bc0e5500a53cfffde24b564dc43d46ddf6ca
 
 define $(package)_set_vars
 $(package)_config_opts=--disable-shared
