@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-#
+# Copyright (c) 2014-2015 The Bitcoin Core developers
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -7,7 +7,6 @@
 from test_framework.mininode import *
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import *
-import time
 from test_framework.blocktools import create_block, create_coinbase
 
 '''
@@ -445,7 +444,7 @@ class SendHeadersTest(BitcoinTestFramework):
 
         inv_node.sync_with_ping() # Make sure blocks are processed
         test_node.last_getdata = None
-        test_node.send_header_for_blocks(blocks);
+        test_node.send_header_for_blocks(blocks)
         test_node.sync_with_ping()
         # should not have received any getdata messages
         with mininode_lock:
