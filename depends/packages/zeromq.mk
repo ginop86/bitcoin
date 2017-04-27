@@ -7,7 +7,9 @@ $(package)_sha256_hash=5b23f4ca9ef545d5bd3af55d305765e3ee06b986263b31967435d285a
 define $(package)_set_vars
   $(package)_config_opts=--without-docs --disable-shared --without-libsodium --disable-curve --disable-perf
   $(package)_config_opts_linux=--with-pic
-  $(package)_cxxflags=-std=c++11
+  $(package)_cflags=-D_WIN32_WINNT=0x0600
+  $(package)_cppflags=-D_WIN32_WINNT=0x0600
+  $(package)_cxxflags=-std=c++11 -D_WIN32_WINNT=0x0600
 endef
 
 define $(package)_preprocess_cmds
